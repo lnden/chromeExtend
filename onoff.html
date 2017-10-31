@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        [class^="u-icon"] {
+            display: inline-block;
+            color: #fff;
+            vertical-align: middle;
+        }
+        .u-icon-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            border-radius: 30px;
+            box-shadow: 0 0 0 1px #e5e5e5;
+        }
+
+        .on.u-icon-toggle, .on .u-icon-toggle {/*因为这里可能会在父元素上加on 也可能在子元素上加on  所以*/
+            box-shadow: 0 0 0 1px #4089e8;
+            background-color: #4089e8;
+        }
+
+        .u-icon-toggle i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            -webkit-box-shadow: 0 0 2px #bbb;
+            border-radius: 100%;
+            background-color: #fff;
+            -webkit-transition: 300ms linear;
+            -webkit-transform: translate3d(0,0,0);
+        }
+
+        .on.u-icon-toggle i, .on .u-icon-toggle i {
+            -webkit-transform: translate3d(30px,0,0);
+        }
+    </style>
+
+</head>
+<body>
+    <span class="u-icon-toggle" id="OnOff"><i></i></span>
+<script>
+    var buttonEle = document.getElementById('OnOff');
+    buttonEle.onclick = function(){
+        if(this.classList.contains('on')){
+            this.classList.remove("on");
+        }else{
+            this.classList.add("on");
+        }
+        //  console.log(document.getElementById('OnOff').classList.contains('on'));判断是否有这个类名
+    };
+</script>
+
+</body>
+</html>
