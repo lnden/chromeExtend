@@ -1,0 +1,14 @@
+<style>
+
+</style>
+
+<template>
+    <view class="box">我是公共头部组件并且我还是一个普通组件</view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    export default class CommHeader extends wepy.component {
+
+    }
+</script>

@@ -1,0 +1,23 @@
+<style>
+</style>
+
+<template>
+    <view>
+        <view>我是儿子组件，初次见面不知道</view>
+        <view style="color:red">{{title}}</view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    export default class Child extends wepy.component {
+        props = {
+            // 静态传值
+            title: String
+        };
+ 
+        onLoad () {
+            console.log('这是在子组件输出：'+this.title); 
+        }
+    } 
+</script>

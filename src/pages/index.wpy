@@ -1,0 +1,88 @@
+<style>
+    .container{
+        background:#f00;
+    }
+    button{
+        margin:10px 0px;
+    }
+</style>
+
+<template>
+    <view>
+        <view class="container">
+            我是Index页面的数据，下面是两个引入组件
+            <button @tap="jumpComm">普通组件引用</button>
+            <button @tap="jumpRepeat">组件的循环渲染</button>
+            <button @tap="jumpComputed">computed计算属性</button>
+            <button @tap="jumpWatcher">watcher监听器</button>
+            <button @tap="jumpPropsStatic">propsStatic传值</button>
+            <button @tap="jumpPropsDynamic">propsDynamic传值</button>
+            <button @tap="jumpAjax">组件通信与交互</button>
+            <button @tap="jumpFunc">组件自定义事件处理函数</button>
+            <button @tap="jumpSlot">slot组件内容分发插槽</button>
+        </view>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+
+export default class Index extends wepy.page {
+    methods = {
+        jumpComm(){
+            console.log(11111);
+            wx.navigateTo({
+                url: './comm',
+            })
+        },
+        jumpRepeat(){
+            console.log(22222);
+            wx.navigateTo({
+                url: './circulation',
+            })
+        },
+        jumpComputed(){
+            console.log(33333);
+            wx.navigateTo({
+                url: './computed',
+            })
+        },
+        jumpWatcher(){
+            console.log(44444);
+            wx.navigateTo({
+                url: './watcher',
+            })
+        },
+        jumpPropsStatic(){
+            console.log(55555);
+            wx.navigateTo({
+                url: './propsStatic',
+            })
+        },
+        jumpPropsDynamic(){
+            console.log(66666);
+            wx.navigateTo({
+                url: './propsDynamic',
+            })
+        },
+        jumpAjax(){
+            console.log(77777);
+            wx.navigateTo({
+                url: './watcher',
+            })
+        },
+        jumpFunc(){
+            console.log(88888);
+            wx.navigateTo({
+                url: './watcher',
+            })
+        },
+        jumpSlot(){
+            console.log(99999);
+            wx.navigateTo({
+                url: './watcher',
+            })
+        }
+    }
+}
+</script>

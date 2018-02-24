@@ -1,0 +1,46 @@
+<style>
+</style>
+
+<template>
+    <view style="color:#090">
+        测试，我是儿子组件，初次见面不知道
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    export default class Child extends wepy.component {
+        props = {
+            // 静态传值
+            title: String,
+
+            // 父向子单向动态传值
+            syncTitle: {
+                type: String,
+                default: 'null'
+            },
+
+            twoWayTitle: {
+                type: Number,
+                default: 'nothing',
+                twoWay: true
+            }
+        };
+ 
+        onLoad () {
+            console.log(this.title); // p-title
+            console.log(this.syncTitle); // p-title
+            console.log(this.twoWayTitle); // p-title
+
+            this.title = 'c-title';
+            console.log(this.$parent.parentTitle,111111111111); // p-title.
+            this.twoWayTitle = 'two-way-title';
+            this.$apply();
+            console.log(this.$parent.parentTitle); // two-way-title.  --- twoWay为true时，子组件props中的属性值改变时，会同时改变父组件对应的值
+            this.$parent.parentTitle = 'p-title-changed';
+            this.$parent.$apply();
+            console.log(this.title); // 'c-title';
+            console.log(this.syncTitle); // 'p-title-changed' --- 有.sync修饰符的props属性值，当在父组件中改变时，会同时改变子组件对应的值。
+        }
+    } 
+</script>

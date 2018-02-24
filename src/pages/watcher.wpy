@@ -1,0 +1,31 @@
+<style>
+
+</style>
+
+<template>
+    <view>
+        我是watch页面
+        <view class="box">这个watch监听，请去控制台查看</view>
+        <view>{{num}}</view>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    export default class Watcher extends wepy.page {
+        data = {
+            num : 1
+        }
+        watch = {
+            num (newValue, oldValue) {
+                console.log(`num value: ${oldValue} -> ${newValue}`)
+            }
+        }
+        onLoad () {
+            setInterval(() => {
+                this.num++;
+                this.$apply();
+            }, 1000)
+        }
+    }
+</script>

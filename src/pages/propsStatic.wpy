@@ -1,0 +1,25 @@
+<style>
+
+</style>
+
+<template>
+    <view>
+        我是props传值 => 静态传值
+        <view class="box">这个父子组件进行静态传值</view>
+        <staticchild :title="mytitle"></staticchild>
+    </view>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    import staticChild from '../components/staticChild'
+    export default class PropsStatic extends wepy.page {
+        data = {
+            mytitle : '我是父亲组件的数据'
+        }
+  
+        components = {
+            staticchild:staticChild
+        }
+    }
+</script>
