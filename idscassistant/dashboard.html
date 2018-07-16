@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="lib/bpoAssistant.css">
+    <style>
+        section {
+            width: 250px;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .imgTxt-btn, .UC-btn, .video-btn {
+            display: none;
+        }
+
+        #exit {
+            color: #3e90f7;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <span id="userInfo"></span>
+        <a id="exit">退出</a>
+    </div>
+    <hr>
+    <div id="dialog-form">
+        <ul class="toollist">
+            <li>
+                <label>
+                    <input class="mui-switch mui-switch-anim" type="checkbox" id="windowSwitch">
+                    浮动窗口
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input class="mui-switch mui-switch-anim" type="checkbox" id="websearch">
+                    界面搜索
+                </label>
+            </li>
+            <li id="highlightGroup">
+                <label>
+                    <input class="mui-switch mui-switch-anim" checked type="checkbox" id="highlight">
+                    关键词高亮
+                </label>
+            </li>
+            <li>
+                <button class="search-bt" id="search-dwz" type="button">多网站同步搜索</button>
+            </li>
+            <li class="UC-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim" type="checkbox" checked disabled> UC神马审核量统计
+                </label>
+            </li>
+            <li class="imgTxt-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim defaultOpen" type="checkbox" checked disabled
+                           data-config="StatisticalAuditVolume"> 图文BOSS审核量统计
+                </label>
+            </li>
+            <li class="imgTxt-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="quickInput"> 图文不通过问题说明
+                </label>
+            </li>
+            <li class="imgTxt-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="linkAutoOpen"> 图文自动打开内容链接
+                </label>
+            </li>
+            <li id="pullKeywordFromServerGroup" class="imgTxt-btn UC-btn">
+                <button class="search-bt" type="button" id="pullKeywordFromServer">更新关键词</button>
+                <p></p>
+            </li>
+            <li class="video-btn">
+                <button class="search-bt l" type="button" id="fillBlockReason">视频选填禁用理由</button>
+            </li>
+            <li class="video-btn">
+                <button class="search-bt l" type="button" id="qulityControlStatistics">视频质检结果统计</button>
+            </li>
+            <li class="video-btn">
+                <!--<button class="search-bt l" type="button" id="artificialStatistics">人工统计视频审核量</button>-->
+                <label>
+                    <input class="mui-switch mui-switch-anim" type="checkbox" id="artificialStatistics"> 人工统计视频审核量
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim defaultOpen" type="checkbox" checked disabled
+                           data-config="taggedVideoStatistics"> 视频ASN审核量统计
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="showVideoTitle"> 视频标题浮显
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="showQqOwner"> 视频日志显示操作人姓名
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="videoPlayAcceleration"> 视频键盘快进
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="videoAutoPlay"> 视频自动播放
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="higlightVideoTag"> 视频标注时高亮已添加标签
+                </label>
+            </li>
+            <li class="video-btn">
+                <label>
+                    <input class="mui-switch mui-switch-anim userContrFun" type="checkbox" checked
+                           data-config="addQuickSearch"> 视频标注回车搜索标签
+                </label>
+            </li>
+        </ul>
+    </div>
+</section>
+</body>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="dashboard.js"></script>
+</html>

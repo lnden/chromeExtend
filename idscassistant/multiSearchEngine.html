@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>多网站同步搜索</title>
+	<style>
+		body {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.web-search {
+			width: 675px;
+			margin: 15px auto;
+			overflow: hidden;
+		}
+
+		#web-search-inp {
+			text-indent: 10px;
+			border: 1px solid #ccc;
+			height: 40px;
+			line-height: 40px;
+			width: 560px;
+			font-size: 16px;
+			float: left;
+		}
+
+		#web-search-btn {
+			cursor: pointer;
+			border: 0px;
+			background: #3e90f7;
+			color: #fff;
+			font-size: 16px;
+			height: 42px;
+			width: 100px;
+			float: right;
+		}
+
+		.search-div {
+			width: 100%;
+			border-top: 1px solid #ccc;
+		}
+
+		.search-div div {
+			width: 25%;
+			float: left;
+		}
+
+		.search-iframe {
+			width: 100%;
+			height: 500px;
+			border: 1px solid #ccc;
+			overflow: auto;
+		}
+	</style>
+	<script src="lib/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+	<div class="web-search">
+		<input id="web-search-inp" type="text">
+		<button type="button" id="web-search-btn">查询</button>
+	</div>
+	<div class="search-div">
+		<div>
+			<iframe id="iframe1" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe2" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe3" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe4" src="" class="search-iframe"></iframe>
+		</div>
+	</div>
+	<script src="multiSearchEngine.js"></script>
+</body>
+
+</html>

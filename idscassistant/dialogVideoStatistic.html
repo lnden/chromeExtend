@@ -1,0 +1,144 @@
+<style>
+    .box {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .validateTips {
+        width: 100%;
+        line-height: 32px;
+        border-bottom: 1px solid #dedede;
+        text-align: center;
+        color: red;
+        display: none;
+    }
+
+    .red {
+        color: red;
+    }
+    .content-statistic {
+        padding: 20px;
+    }
+
+    .yui-form {
+        width: 100%;
+    }
+
+    .yui-form-item {
+        margin-bottom: 15px;
+        clear: both;
+    }
+
+    .yui-form-label {
+        float: left;
+        display: block;
+        padding: 9px 15px;
+        width: 110px;
+        font-weight: 400;
+        text-align: right;
+        line-height: 20px;
+        position: relative;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .yui-input-block {
+        margin-left: 140px;
+        margin-right: 30px;
+        min-height: 36px;
+        position: relative;
+    }
+
+    .yui-input-block label {
+        padding: 8px 26px 8px 0;
+        float: left;
+    }
+
+    .yui-input-block label input[type='radio'] {
+        margin-right: 6px;
+    }
+
+    .yui-input, .yui-select, .yui-textarea {
+        float: left;
+        height: 38px;
+        line-height: 38px;
+        border: 1px solid #e6e6e6;
+        background-color: #fff;
+        border-radius: 2px;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        opacity: 1;
+    }
+
+    .yui-input:hover, .yui-textarea:hover {
+        border-color: #D2D2D2 !important
+    }
+
+    .yui-input:focus, .yui-textarea:focus {
+        border-color: #C9C9C9 !important
+    }
+    .no-close .ui-dialog-titlebar-close {
+        display: none;
+    }
+</style>
+<div class="box">
+    <p class="validateTips">字段校验结果</p>
+    <div class="content-statistic">
+        <form class="yui-form" id="qulityControlStatisticsForm" action="">
+            <div class="yui-form-item">
+                <label class="yui-form-label"><span class="red">*</span>审核员甲方账号</label>
+                <div class="yui-input-block">
+                    <input type="text" name="auditor" id="auditor" maxlength="20" placeholder="请输入审核员甲方账号" class="yui-input">
+                </div>
+            </div>
+            <div class="yui-form-item">
+                <label class="yui-form-label"><span class="red">*</span>视频ID</label>
+                <div class="yui-input-block">
+                    <input type="text" name="v-id" id="orderId" maxlength="20" placeholder="请输入视频ID" class="yui-input">
+                </div>
+            </div>
+            <div class="yui-form-item">
+                <label class="yui-form-label"><span class="red">*</span>错误类型</label>
+                <div class="yui-input-block">
+                    <select name="e-status" id="errorStatus" class="yui-select">
+                        <option value="0">请选择</option>
+                        <option value="1">分类有误</option>
+                        <option value="2">标签有误</option>
+                        <option value="3">标签缺少</option>
+                        <option value="4">标签权重</option>
+                        <option value="5">视频质量</option>
+                        <option value="6">视频尺度</option>
+                        <option value="7">广告</option>
+                        <option value="8">禁用错误</option>
+                        <option value="9">启用错误</option>
+                        <option value="10">标注错误</option>
+                        <option value="11">综合错误</option>
+                        <option value="12">无错误</option>
+                    </select>
+                </div>
+            </div>
+            <div class="yui-form-item">
+                <label class="yui-form-label">错误详情</label>
+                <div class="yui-input-block">
+                    <input type="text" name="e-detail" id="errorDetail" maxlength="50" placeholder="请输入错误详情" class="yui-input">
+                </div>
+            </div>
+            <div class="yui-form-item">
+                <label class="yui-form-label">修改方式</label>
+                <div class="yui-input-block">
+                    <input type="text" name="update-method" id="updateMethod" maxlength="50" placeholder="请输入修改方式" class="yui-input">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

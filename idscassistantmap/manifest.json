@@ -1,0 +1,87 @@
+{
+    "name": "IDSC 工作助手 地图版",
+    "version": "1.3",
+    "description": "灵活可配、辅助审核、快捷操作、提能增效。",
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "http://47.104.152.151:8080/*",
+        "http://47.104.152.151:8082/*",
+        "tabs",
+        "activeTab",
+        "notifications"
+    ],
+    "homepage_url": "https://www.google.com",
+    "background": {
+        "scripts": [
+            "lib/jquery-3.3.1.js",
+            "backgroundCommon.js",
+            "backgroundMap.js"
+        ],
+        "persistent": true
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "browser_action": {
+        "default_title": "IDSC 工作助手",
+        "default_icon": {
+            "16": "images/16.png",
+            "32": "images/32.png",
+            "48": "images/48.png",
+            "128": "images/128.png"
+        },
+        "default_popup": "dashboard.html"
+    },
+    "icons": {
+        "16": "images/16.png",
+        "32": "images/32.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://shenhe.map.bigdata.wsd.com/views/Cmain.html"],
+            "js": ["lib/jquery-3.3.1.js", "contentMapAllTasks.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["http://*.map.bigdata.wsd.com/views/*"],
+            "css": ["lib/bpoAssistant.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "lib/highlight.js",
+                "lib/diff.js",
+                "contentCommon.js",
+                "classifyRules.js",
+                "cityAreaCode.js",
+                "provCity.js",
+                "mapSubmitRules.js",
+                "contentMap.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "images/error.jpg",
+        "dialogMap.html",
+        "dashboard.html",
+        "dashboard.js",
+        "search.html",
+        "injectMap.js",
+        "blackPhoneNumberList.json",
+        "lib/jquery-ui-1.12.1/jquery-ui.css",
+        "lib/jquery-ui-1.12.1/images/ui-icons_444444_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_555555_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_777620_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_777777_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_cc0000_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png"
+    ],
+    "manifest_version": 2
+}

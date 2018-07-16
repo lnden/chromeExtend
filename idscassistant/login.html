@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        ul {
+            font-size: 14px;
+            width: 240px;
+            padding: 10px;
+            margin: 10% auto 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        button {
+            width: 140px;
+            height: 28px;
+            cursor: pointer;
+        }
+
+        #loginTab img, #teamsTab button {
+            display: block;
+            margin: auto;
+        }
+
+        #loginTab label {
+            display: inline-block;
+            width: 4em;
+            text-align: right;
+        }
+
+        #loginTab input {
+            width: 120px;
+            height: 20px;
+            padding: 2px 8px;
+        }
+
+        #loginTab select {
+            width: 120px;
+            height: 20px;
+        }
+
+        #teamsTab label {
+            display: block;
+            margin-bottom: 8px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        #teamsTab input {
+            margin-left: -20px;
+            vertical-align: middle;
+        }
+
+        #loging {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: #fff;
+            line-height: 80vh;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #tips {
+            color: red;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<ul id="loginTab">
+    <li>
+        <img src="images/128.png">
+    </li>
+    <li>
+        <label for="user">用户名</label>
+        <input id="user" type="text" placeholder="请输入用户名">
+    </li>
+    <li>
+        <label for="password">密码</label>
+        <input id="password" type="password" placeholder="请输入密码">
+    </li>
+    <li style="display:none;">
+        <label for="tenantId">租户ID</label>
+        <select id="tenantId"></select>
+    </li>
+    <li>
+        <label></label>
+        <button id="login">登录</button>
+    </li>
+</ul>
+<ul id="teamsTab" style="display: none">
+    <li>
+        <h2>选择项目</h2>
+    </li>
+    <li id="radio_teams">
+    </li>
+    <li>
+        <button id="teams">确定</button>
+    </li>
+</ul>
+<div id="loging">登录中...</div>
+<div id="tips"></div>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

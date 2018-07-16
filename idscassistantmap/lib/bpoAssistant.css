@@ -1,0 +1,207 @@
+#dialog-form .mui-switch {
+    width: 45px;
+    height: 24px;
+    position: relative !important;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+}
+
+.idscTitle {
+    font-weight: bold;
+}
+#idscControlPanel {
+    padding: 0;
+    margin: 0;
+}
+
+#dialog-form input {
+    vertical-align: middle;
+}
+
+#dialog-form label {
+    line-height: 30px;
+    font-size: 12px !important;
+}
+
+#dialog-form button {
+    width: auto;
+    padding: 3px 7px;
+    text-align: center;
+    background: #fff;
+    border: 1px rgb(217, 217, 217) solid;
+    border-radius: 4px;
+    outline: none;
+    font-size: 12px !important;
+    color: rgb(102, 102, 102) !important;
+}
+
+#dialog-form button:hover {
+    color: #fff !important;
+    background: rgb(24, 144, 255);
+    border-color: transparent;
+}
+
+#dialog-form .mui-switch:before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#dialog-form .mui-switch:checked {
+    border-color: rgb(25, 158, 216);
+    box-shadow: rgb(25, 158, 216) 0 0 0 16px inset;
+    background-color: rgb(25, 158, 216);
+}
+
+#dialog-form .mui-switch:checked:before {
+    left: 21px;
+}
+
+#dialog-form .mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+#dialog-form .mui-switch.mui-switch-anim:before {
+    transition: left 0.3s;
+}
+
+#dialog-form .mui-switch.mui-switch-anim:checked {
+    box-shadow: rgb(25, 158, 216) 0 0 0 16px inset;
+    background-color: rgb(25, 158, 216);
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+#dialog-form .mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+ul.toollist {
+    margin-bottom: 0;
+}
+.toollist li {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    line-height: 30px !important;
+    height: 30px !important;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.toollist li .mui-switch {
+    float: left;
+    margin-right: 5px;
+}
+
+#dialog-form label {
+    line-height: 25px !important;
+    float: left;
+    margin-left: 10px;
+    font-size: 13px !important;
+}
+
+#dialog-form button {
+    font-size: 13px !important;
+}
+#search-copy2 {
+    margin-left: 10px;
+}
+.highlight {
+    background-color: #fff34d;
+    -moz-border-radius: 5px;
+    /* FF1+ */
+    -webkit-border-radius: 5px;
+    /* Saf3-4 */
+    border-radius: 5px;
+    /* Opera 10.5, IE 9, Saf5, Chrome */
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    /* FF3.5+ */
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    /* Saf3.0+, Chrome */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    /* Opera 10.5+, IE 9.0 */
+}
+.highlight2 {
+    background-color: #fff34d;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+.mar {
+    margin-top: 10px;
+}
+.over {
+    overflow: hidden;
+}
+/* 修复样式和其他网页冲突 */
+.ui-dialog .ui-dialog-title,
+.ui-dialog .ui-dialog-content {
+    text-align: left;
+}
+.ui-dialog .ui-dialog-title {
+    font-size: 12px !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    color: #333333 !important;
+}
+.ui-dialog .ui-dialog-titlebar {
+    height: auto !important;
+    background: #e9e9e9 !important;
+    padding: 0.2em 1em !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+    background-image: none !important;
+}
+.ui-button-icon-only {
+    text-indent: 0px !important;
+    font-size: 0em !important;
+}
+#dialog {
+    position: relative !important;
+    margin: 0px !important;
+    border: 0px !important;
+    left: 0px !important;
+    top: 0px !important;
+    padding: 0.5em 1em !important;
+}
+span.highlight,
+span.highlight2 {
+    display: inline !important;
+}
+#search_jm {
+    height: 38px !important;
+    padding: 0.8em 0.6rem 0rem 0.5rem !important;
+    box-sizing: content-box !important;
+}
+.toollist li label {
+    font-weight: normal !important;
+}
+.maptable td {
+    padding: 2px;
+}

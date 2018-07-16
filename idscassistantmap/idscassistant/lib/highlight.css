@@ -1,0 +1,18 @@
+.IDSC-Assistant {
+     font-style: normal; 
+     border-radius: 3px; 
+     padding-left: 3px; 
+     padding-right: 3px; 
+     box-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
+     text-decoration: none; 
+}
+
+.IDSC-Assistant-style-1 {
+    font-style: normal; 
+    border-radius: 0px; 
+    padding-left: 0px; 
+    padding-right: 0px; 
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3); 
+    text-decoration: none; 
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>多网站同步搜索2</title>
+	<style>
+		body {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		ul,
+		li {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.web-search {
+			width: 675px;
+			margin: 15px auto;
+			overflow: hidden;
+		}
+
+		#web-search-inp {
+			text-indent: 10px;
+			border: 1px solid #ccc;
+			height: 40px;
+			line-height: 40px;
+			width: 560px;
+			font-size: 16px;
+			float: left;
+		}
+
+		#web-search-btn {
+			cursor: pointer;
+			border: 0px;
+			background: #3e90f7;
+			color: #fff;
+			font-size: 16px;
+			height: 42px;
+			width: 100px;
+			float: right;
+		}
+
+		.search-div {
+			border-top: 1px solid #ccc;
+		}
+
+		.search-div div {
+			display: none;
+		}
+
+		.search-div div.on {
+			display: block;
+		}
+
+		.search-iframe {
+			width: 100%;
+			height: 500px;
+			overflow: auto;
+			border: 0px;
+		}
+
+		.tab {
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+
+		.tab li {
+			width: 100px;
+			display: inline-block;
+			text-align: center;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		.tab li.cur {
+			color: #3e90f7;
+			border-bottom: 3px solid #3e90f7;
+			font-weight: bold;
+		}
+	</style>
+	<script src="lib/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+	<div class="web-search">
+		<input id="web-search-inp" type="text">
+		<button type="button" id="web-search-btn">查询</button>
+	</div>
+	<ul class="tab">
+		<li class="cur">百度</li>
+		<li>天眼查</li>
+		<li>大众点评</li>
+		<li>美团</li>
+	</ul>
+
+	<div class="search-div">
+		<div class="on">
+			<iframe id="iframe1" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe2" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe3" src="" class="search-iframe"></iframe>
+		</div>
+		<div>
+			<iframe id="iframe4" src="" class="search-iframe"></iframe>
+		</div>
+	</div>
+	<script src="multiSearchEngine2.js"></script>
+</body>
+
+</html>

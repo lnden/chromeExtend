@@ -1,0 +1,157 @@
+{
+    "name": "IDSC 工作助手",
+    "version": "7.8",
+    "description": "灵活可配、辅助审核、快捷操作、提能增效。",
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "https://asn.qq.com/*",
+        "http://discover.sm.cn/*",
+        "http://47.104.152.151:8080/*",
+        "http://47.104.152.151:8082/*",
+        "tabs",
+        "activeTab",
+        "notifications"
+    ],
+    "background": {
+        "scripts": [
+            "lib/jquery-3.3.1.js",
+            "config.js",
+            "backgroundFunctionalitySwitch.js",
+            "backgroundCommon.js",
+            "background.js",
+            "backgroundVideoStatistics.js",
+            "backgroundVideoArtificial.js",
+            "backgroundDiscover.js",
+            "backgroundKeywords.js"
+        ],
+        "persistent": true
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "browser_action": {
+        "default_title": "IDSC 工作助手",
+        "default_icon": {
+            "16": "images/16.png",
+            "32": "images/32.png",
+            "48": "images/48.png",
+            "128": "images/128.png"
+        },
+        "desc":"1.初始化默认展示login页面",
+        "default_popup": "login.html"
+    },
+    "icons": {
+        "16": "images/16.png",
+        "32": "images/32.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://asn.qq.com/*"],
+            "css": ["lib/bpoAssistant.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "lib/diff.js",
+                "contentFunctionalitySwitch.js",
+                "contentCommon.js",
+                "contentVideoPlayer.js",
+                "contentVideo.js",
+                "contentVideoArtificial.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://publicboss.qq.com/*"],
+            "css": ["lib/bpoAssistant.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "lib/diff.js",
+                "contentFunctionalitySwitch.js",
+                "contentCommon.js",
+                "contentImageText.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "matches": ["http://discover.sm.cn/*"],
+            "css": ["lib/bpoAssistant.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "contentFunctionalitySwitch.js",
+                "contentDiscover.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "css": ["lib/bpoAssistant.css", "lib/highlight.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "contentFunctionalitySwitch.js",
+                "contentCommon.js",
+                "contentWebSearchGUI.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["http://*/*", "https://*/*", "file://*/*"],
+            "css": ["lib/bpoAssistant.css", "lib/highlight.css"],
+            "js": [
+                "lib/jquery-3.3.1.js",
+                "lib/jquery-ui-1.12.1/external/jquery/jquery.js",
+                "lib/jquery-ui-1.12.1/jquery-ui.js",
+                "lib/highlight.js",
+                "lib/highlighter.js",
+                "contentHighlight.js",
+                "contentPopupSearch.js",
+                "contentFindInPage.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        "images/error.jpg",
+        "dialogMap.html",
+        "dialogVideo.html",
+        "dialogDiscover.html",
+        "dialogImageText.html",
+        "dashboard.html",
+        "dashboard.js",
+        "multiSearchEngine.html",
+        "multiSearchEngine2.html",
+        "mutliMap.html",
+        "search.html",
+        "dialogVideoStatistic.html",
+        "dialogfillBlockReason.html",
+        "inject.js",
+        "injectMap.js",
+        "black.json",
+        "login.html",
+        "login.js",
+        "contentAll.js",
+        "ajaxHook.js",
+        "lib/jquery-ui-1.12.1/jquery-ui.css",
+        "lib/jquery-ui-1.12.1/images/ui-icons_444444_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_555555_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_777620_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_777777_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_cc0000_256x240.png",
+        "lib/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png"
+    ],
+    "manifest_version": 2
+}
