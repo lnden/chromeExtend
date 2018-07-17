@@ -80,6 +80,12 @@
     // chrome.browserAction.setBadgeText({text: 'new'});
     // chrome.browserAction.setBadgeBackgroundColor({color: [255, 0, 0, 255]});
 ```
+
+> 7.获取当前Chrome扩展的ID值
+
+```
+    chrome.runtime.id    //oapmgafpfnoljejoohgabhdpcmbclhgm
+```
 ### manifest.json 内容详解
 
 > 1.[ options_page 和 options_ui ] 属性

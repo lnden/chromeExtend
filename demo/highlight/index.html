@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+</head>
+<body>
+<div>
+            <pre>
+                <code class="lang-javascript">
+        function init(){
+            $scope.req.getArticle();
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        }
+                </code>
+            </pre>
+</div>
+<div class="content" ui-view></div>
+<script >hljs.initHighlightingOnLoad();
+alert(1)
+</script>
+</body>
+</html>
